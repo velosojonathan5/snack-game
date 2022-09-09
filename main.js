@@ -62,6 +62,18 @@ class SnakeGame {
     }
 
     changeDirection(d) {
+        if(this.direction === directions.top && d === directions.down){
+            return;
+        }
+        if(this.direction === directions.down && d === directions.top){
+            return;
+        }
+        if(this.direction === directions.left && d === directions.right){
+            return;
+        }
+        if(this.direction === directions.right && d === directions.left){
+            return;
+        }
         this.direction = d;
     }
 
